@@ -1,4 +1,14 @@
+
+"""
+Variables
+Listas
+Tuplas
+Funciones basicas de listas
+"""
+
 # Mensaje por consola
+from builtins import print
+
 print("Hellow World this is the start of a best program in inteligence artificial")
 
 # Variables
@@ -50,22 +60,44 @@ print('lista ordenada', lista2)
 lista2.sort(reverse=True)  # .sort(reverse)  ordena descendentemente
 print('lista ordenada descendetemente', lista2)
 
-print('menor de la lista', min(lista2)) #min(lista) el menor
-print('mayor de la lista', max(lista2)) #max(lista) el mayor
-print('Longitud de la lista', len(lista2)) #len(lista) cantidad elementos
+print('menor de la lista', min(lista2))  # min(lista) el menor
+print('mayor de la lista', max(lista2))  # max(lista) el mayor
+print('Longitud de la lista', len(lista2))  # len(lista) cantidad elementos
 
-lista2.append(10) #insertando el 10 al final
+lista2.append(10)  # insertando el 10 al final
 # lista2.clear()   .clear()  vacia la lista
 print(lista2)
-resultado = 10 in lista2   # valor in lista  // permite preguntar si el valor esta en la lista
+resultado = 10 in lista2  # valor in lista  // permite preguntar si el valor esta en la lista
 print('Esta el 10 en la lista?', resultado)
 print('indice del valor 100', lista2.index(100))  # .index(valor)  retorna la posicion del valor a encontrar
 print('cantidad de veces que se encuentra el 100', lista2.count(100))
 
-#Matriz
+# Matriz
 matriz1 = [
-    [1,2,3],
-    [2,8,3]
+    [1, 2, 3],
+    [2, 8, 3]
 ]
 print(matriz1)
-print(matriz1[1][1])  #[x][y]
+print(matriz1[1][1])  # [x][y]
+
+# Tuplas
+# listas no inmutables, pero mas rapidas de acceder
+tupla1 = (1, 2, 3)
+print(tupla1)
+print(tupla1[1])
+
+tupla2, tupla3, tupla4 = (1, 2, 3), (4.5, 5.2), (1, 90, 2, 4, 5, 222, 666, 33)
+print(tupla2)
+
+# asingnacion lineal desacoplada
+uno, dos, tres = tupla2
+print(uno, dos, tres)
+# con el *variable, asigna todos los valores restantes de la lista/tupla a la variable con el *
+cuatro, *cinco = tupla4
+print(cuatro, cinco)
+
+listaA = [50, 20, 14, 3]
+listaB = [100, 5, 50, 20, 14, 3]
+listaZip = zip(listaA, listaB)  # acopla en agrupaciones (n cantidad de listas/tuplas), la misma posicion de cada arreglo
+listaZip = list(listaZip)  # list()   tuple()  permiter parsear los datos
+print(listaZip)
