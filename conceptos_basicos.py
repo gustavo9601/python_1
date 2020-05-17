@@ -18,6 +18,10 @@ number2 = 5
 suma = number1 + number2
 print(suma)
 
+# None es el tipo de dato como null o falso
+variable_None = None
+print('variable_None', variable_None)
+
 # Declaracion de variables en una misma linea, con su inicialiacion en el mismo orden de posicion
 valor1, valor2, valor3 = 1, 5, 15
 print(valor1, valor2, valor3)
