@@ -227,3 +227,19 @@ print("lista_tabla_multiplicar", list(tabla_multiplicar(5, 15)))
 # para este caso recorremos una funcion, qe devolvera un objeto iterable lista, de varias tuplas
 for valor, numero, posicion in tabla_multiplicar(5, 15):
     print(str(numero) + " x " + str(posicion) + " = " + str(valor))
+
+"""
+Anotaciones
+
+Permiten definir el timapd de datos que recibira por parametro y el tipo de retorno de la funcion
+si no va a retornara nada debe ser -> None:
+Es netamente informativo, ya que no hace la validacion del tipado
+"""
+
+
+# def nombreFuncion (param1: tipoData, param2: tipoData = valorDefault) -> tipoDatoRetorno
+def funcion_anotacion(nombre: str, edad: int = 24) -> str:
+    return "Nombre: " + nombre + " edad: " + str(edad)
+
+
+print(funcion_anotacion("gus"))
