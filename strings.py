@@ -12,8 +12,8 @@ lenguajes = "php, python, c#, java, js"
 lenguajes_array = lenguajes.split(', ')  # .split('separador')  # convierte a arreglo un string
 print('lenguajes_array', lenguajes_array)
 
-lenguajes_string = " - ".join(
-    lenguajes_array)  # "separador".join(arreglo)  # convierte un arreglo en string, definiendo su separador
+# "separador".join(arreglo)  # convierte un arreglo en string, definiendo su separador
+lenguajes_string = " - ".join(lenguajes_array)
 print('lenguajes_string', lenguajes_string)
 
 # """  empezando el string de esta forma, se pueden hacer textos multilinea
@@ -52,13 +52,16 @@ curso = "Python"
 version = "3.0"
 # " %s " %(variable)   # %s en el string indica el valor a cambiar, %(variable)   variable a cambiar
 curso_Version = "Curso de %s en la version %s" % (curso, version)
-print(curso_Version)
+print('"Curso de %s en la version %s" % (curso, version) => ', curso_Version)
 # " {} ".format(variable)  # permite indicar que ira una variable en el string   .format(variable)
 curso_Version = "Curso de {} en la version {}".format(curso, version)
-print(curso_Version)
+print('"Curso de {} en la version {}".format(curso, version) => ', curso_Version)
 # " {a} ".format(a=variable)  # de esta forma realiza el reemplazo en funcion de la variable y no d eposicion
 curso_Version = "Curso de {a} en la version {b}".format(a=curso, b=version)
-print(curso_Version)
+print('"Curso de {a} en la version {b}".format(a=curso, b=version) => ', curso_Version)
+# mas usada
+print("usando la f al inicial => ", f"Curso de {curso} en la version {curso_Version}")
+
 
 ##########################
 # Concatenaciones
@@ -77,8 +80,8 @@ text_in_mensaje = "pythons" in mensaje  # "texto" in string  # retorna booleano 
 # not in   # negando la afirmacion
 print("text_in_mensaje", text_in_mensaje)
 
-# .find("texto")   # devuleve la posicion de la primer letra, donde encuentre el texto
-print("mensaje.find('python')", mensaje.find("python"))
+# .find("texto")   # devuleve la posicion de la primer letra, donde encuentre el texto, o -1 si no encuentra el valor
+print("mensaje.find('python')", mensaje.find("pythonsss"))
 
 busqueda = "python"
 indice_busqueda = mensaje.find(busqueda)

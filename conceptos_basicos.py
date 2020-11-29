@@ -71,7 +71,7 @@ print('Longitud de la lista', len(lista2))  # len(lista) cantidad elementos
 lista2.append(10)  # insertando el 10 al final
 # lista2.clear()   .clear()  vacia la lista
 print(lista2)
-resultado = 10 in lista2  # valor in lista  // permite preguntar si el valor esta en la lista
+resultado = 11 in lista2  # valor in lista  // permite preguntar si el valor esta en la lista
 print('Esta el 10 en la lista?', resultado)
 print('indice del valor 100', lista2.index(100))  # .index(valor)  retorna la posicion del valor a encontrar
 print('cantidad de veces que se encuentra el 100', lista2.count(100))
@@ -102,6 +102,9 @@ print(cuatro, cinco)
 
 listaA = [50, 20, 14, 3]
 listaB = [100, 5, 50, 20, 14, 3]
-listaZip = zip(listaA, listaB)  # acopla en agrupaciones (n cantidad de listas/tuplas), la misma posicion de cada arreglo
+# acopla en agrupaciones
+# zip(n cantidad de listas/tuplas), la misma posicion de cada arreglo, y de acuerdo a la cantidad de arreglos
+# genera la cantidad de valores en cada tupla de agrupacion
+listaZip = zip(listaA, listaB)
 listaZip = list(listaZip)  # list()   tuple()  permiter parsear los datos
-print(listaZip)
+print("listaZip", listaZip)

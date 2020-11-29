@@ -26,7 +26,7 @@ print('get_llaves_diccionario1', list(get_llaves_diccionario1))
 # .values() devuelve los valores del diccionari
 get_values_diccionario1 = diccionario1.values()
 print('get_values_diccionario1', get_values_diccionario1)
-# .items() devuelve en parejas los items del ddiccionario (key, value)
+# .items() devuelve en agrupaciones de parejas los items del diccionario [(key, value), (key, value)]
 items_diccionario1 = diccionario1.items()
 print('items_diccionario1', items_diccionario1)
 
@@ -36,4 +36,4 @@ del diccionario1['telefonos']
 diccionario1.pop("pais")
 print("diccionario1 eliminando telefonos y pais", diccionario1)
 diccionario1.clear()   # .clear() vacia el diccionario
-print(diccionario1)
+print("diccionario1.clear()", diccionario1)

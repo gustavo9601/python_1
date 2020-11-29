@@ -52,16 +52,13 @@ print('nParametros(1,2,3,4,5500)', nParametros("Valor requerido", 1, 2, 3, 4, 55
 # Especificando ** al inicio del parametros, permite agrupar los elementos pasados en un diccionario
 # al llamar la funcion es necesario, definir el nombre de variable y valor, ya que se usaran como llave - valor
 def users(**kwargs):
-    print(kwargs)
-
-
+    print("kwargs", kwargs)
 users(nombre="gustavo", apellido="marquez", edad=24)
 
 
 # Permite recibir de todo tipo de parametros
 def combinacionParametros(param1, param2="Test", *args, **kwargs):
-    print(param1, param2, args, kwargs)
-
+    print("param1, param2='Test', *args, **kwargs => ", param1, param2, args, kwargs)
 
 combinacionParametros(100, 'Otro', 4, 5, 6, 7, 8, 2000, curso='Python', version=3.0, modalidad='virtual')
 
@@ -78,7 +75,7 @@ def mostrar_animal():
 
 
 mostrar_animal()
-print(animal)
+print("animal", animal)
 
 
 def mostar_animal_global():
@@ -95,10 +92,8 @@ print(animal)
 Funciones anonimas lambda
 """
 
-
 def centigrados_a_faenheit(grados):
     return grados * 1.8 + 32
-
 
 funcion_variable = centigrados_a_faenheit(24)
 print("funcion_variable", funcion_variable)
@@ -117,7 +112,6 @@ print(con_asteriscos(1, 2, valor=100))
 Funcion map
 permite aplicar una funcion sobre n items de un objeto iterable
 """
-
 
 def cuadrado(numero):
     return numero * numero
@@ -158,7 +152,6 @@ Clouseres en funciones
 # generar o retornar dinamicamente otra funcion
 """
 
-
 def mostrar_mensage(msg):
     msg = msg.title()
 
@@ -175,7 +168,6 @@ nuevo_mensaje()  # necesario llamar la variable que reserva la funcion con () pa
 Usando decoradores para potenciar una funcion
 modificar o adicionara acciones
 """
-
 
 # a, b, c
 # a(b) -> c
@@ -215,7 +207,6 @@ print(suma_resultado)
 Generadores, => permite generar secuencias de datos para generar objetos iterables
 """
 
-
 def tabla_multiplicar(numero, maximo=10):
     for posicion in range(1, maximo + 1):
         # yield es un return, que devolvera el valor, pero permitira la ejcucion del siguiente codigo
@@ -231,15 +222,14 @@ for valor, numero, posicion in tabla_multiplicar(5, 15):
 """
 Anotaciones
 
-Permiten definir el timapd de datos que recibira por parametro y el tipo de retorno de la funcion
+Permiten definir el type de datos que recibira por parametro y el tipo de retorno de la funcion
 si no va a retornara nada debe ser -> None:
 Es netamente informativo, ya que no hace la validacion del tipado
 """
-
 
 # def nombreFuncion (param1: tipoData, param2: tipoData = valorDefault) -> tipoDatoRetorno
 def funcion_anotacion(nombre: str, edad: int = 24) -> str:
     return "Nombre: " + nombre + " edad: " + str(edad)
 
 
-print(funcion_anotacion("gus"))
+print('funcion_anotacion("gus")', funcion_anotacion("gus"))
